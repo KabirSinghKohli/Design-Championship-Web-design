@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovators and their Inovation</title>
+        <link rel="icon"href="Icon.png"type ="image/x-icon">
+
+<style>
+body {
+background-image: url(Slideshow\ \(1\).jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;  
+}
+          
+          .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .navbar {
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            background-color: #1a1a1a;
+            overflow: auto;
+            position: absolute;
+          }
+          
+          .navbar a {
+            float:  left;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            width: 3%;
+            text-align: center;
+          }
+          
+          .navbar a:hover {
+            background-color: #625e5f;
+          }
+          
+          
+          .first {
+            padding-right: 200px;
+          
+          }
+          
+          .container {
+            display: flex;
+            align-items: center;
+            justify-content: center
+          }
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--white: #fff;
+--light-blue: rgb(31, 31, 31);
+--color-blue: #1a1a1a;
+--color-dark-grey: #222831;
+}
+
+html {
+font-size: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
+
+
+
+.containernav {
+margin: 0 auto;
+padding: 0 20px;
+text-align: center;
+}
+
+
+p {
+font-size: 1.5rem;
+padding-top: 2rem;
+line-height: 1.6;
+}
+
+
+
+.timeline-section {
+width: 100%;
+overflow: hidden;  
+}
+
+.timeline-section ul {
+padding: 5rem 0; 
+}
+
+.timeline-section ul li {
+list-style: none;
+position: relative;
+width: 5px; 
+margin: 0 auto; 
+padding-top: 5rem;
+background: var(--color-blue);
+}
+
+.timeline-section ul li::after {
+content: "";
+position: absolute;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+width: 3rem;
+height: 3rem;
+border-radius: 50%;
+background: inherit; 
+}
+
+
+/* Content box */
+.timeline-section ul li div {
+width: 40rem;
+font-size: 1.2rem;
+position: relative;
+bottom: 0;
+padding: 1.5rem;
+background: rgba(255,255,255,.2);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+border-top: 2px solid black;
+border-left: 2px solid black;
+border-bottom: 2px solid black;
+border-right: 2px solid black;
+border: 1px solid black;
+background-color: rgb(66, 66, 66);
+}
+
+.timeline-section ul li div::before {
+content: "";
+position: absolute;
+bottom: 7px;
+width: 0;
+height: 0;
+border-style: solid;
+}
+
+.timeline-section ul li:nth-child(odd) div {
+left: 45px;  
+}
+
+.timeline-section ul li:nth-child(odd) div::before {
+left: -15px;
+border-width: 8px 16px 8px 0;
+border-color: transparent transparent transparent;
+}
+
+.timeline-section ul li:nth-child(even) div {
+left: -439px;
+}
+
+.timeline-section ul li:nth-child(even) div::before {
+right: -15px;
+border-width: 8px 0 8px 16px;
+border-color: transparent transparent transparent; 
+}
+
+time {
+display: block;
+font-size: 1.1rem;
+font-weight: 800;
+margin-bottom: 7px;
+}
+
+.timeline-section ul li::after {
+transition: all 0.5s ease-in-out;
+}  
+
+
+.timeline-section ul li.slide-in::after {
+background: var(--white);
+border: 3px solid var(--light-blue);
+}
+
+.timeline-section ul li div {
+visibility: hidden;
+opacity: 0;
+transition: all 0.5s ease-in-out;
+}
+
+.timeline-section ul li:nth-child(odd) div {
+transform: translateX(20rem);
+}
+
+.timeline-section ul li:nth-child(even) div {
+transform: translateX(-20rem);
+}
+
+.timeline-section ul li.slide-in div {
+transform: none;
+visibility: visible;
+opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+.timeline-section ul li div {
+  width: 25rem;
+}
+
+.timeline-section ul li:nth-child(even) div {
+  left: -289px;
+}
+}
+
+@media screen and (max-width: 600px) {
+.timeline-section ul li {
+  margin-left: 2rem;
+}
+
+.timeline-section ul li div {
+  width: calc(100vw - 91px);
+}
+
+.timeline-section ul li:nth-child(even) div {
+  left: 45px;
+}
+
+.timeline-section ul li:nth-child(even) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--light-blue) transparent transparent;
+}
+}
+
+.icons{
+  width: 25px;
+  height: 25px;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
+  border: black;
+  margin: 30px; 
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; ; 
+  border: black;
+  margin: 30px; 
+}
+
+#rcorners3 {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;  
+  border: black;
+  margin: 30px; 
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  height: 100%;
+}
+
+
+.modal-content {
+  background: #ccc;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 99;
+  font-size: medium;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #000;
+  font-size: 30px;
+}
+
+.close-modal {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  font-size: 40px;
+  
+}
+
+.close-modal:hover {
+  color: #fa5252;
+}
+
+.modal-body p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.hidden-modal {
+  display: none;
+}
+
+
+.blur-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content{
+  position: fixed;
+  top: 15%;
+
+}
+
+.hidden-blur {
+  display: none;
+}
+#popup-img {
+  height: 20cm;
+  width: 100%;
+}
+.timeline-section {
+  text-shadow: 2px 2px 3px black;
+}
+#galizur {
+border-radius: 50%;
+overflow: hidden;
+}
+#bar {
+  height: 1cm;
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+
+  </style>
+</head>
+<body>
+    <main>
+      <div class="Mainpage">
+      <section id="Top">
+        <div class="navbar">
+          <ul class="menu">
+              <li class="links"><a href="Landing.html"><img src="Home Icon.png" class="icons"></a></li>
+              <li class="links"><a href="Galilio Galili.html"><img src="Telescope Icon.png" class="icons"></a></li>
+              <li class="links"><a href="The Wright Brothers.html"><img src="Plane Icon.png" class="icons"></a></li>
+              <li class="links"><a href="Leonardo Da Vinci.html"><img src="Canon Icon.png" class="icons"></a></li>
+              <li class="links"><a href="Steve Jobs.html"><img src="Smart Phone Icon.png" class="icons"></a></li>
+              <li class="links"><a href="Thomas Edison.html"><img src="Bulb Icon.png" class="icons"></a></li>
+              <div class="topnav-centered">
+              <a href=""><h4>TheWrightBrothers</h4></a>
+            </div>
+      </ul>
+  </div>
+        </section>
+
+       
+
+        <section class="timeline-section">
+          <font color="white" size="6">
+          <div class="timeline">>
+            <ul>
+                <li>
+                    <div>
+                      <time>1871</time> Wilbur Wright is born in Millville, Indiana.
+                    </div>
+                </li>
+                  
+                <li>
+                  <div>
+                    <time>1878</time> Orville Wright is born in Dayton, Ohio.
+                  </div> 
+                </li>
+          
+                <li>
+                    <div>
+                      <time>1899</time> The Wright brothers open their bicycle sales and repair shop in Dayton.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1900</time>The brothers begin to study and experiment with flight.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1903</time> On December 17, the Wright Flyer makes its historic powered flight in Kitty Hawk, North Carolina.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1904</time> They make significant refinements to their aircraft's design and control mechanisms.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1908</time>The Wright brothers sign their first contract to sell airplanes to the U.S. Army Signal Corps. 
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1909</time> They open the first civilian flight training school in Montgomery, Alabama. 
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1910</time> Orville Wright pilots the first commercial flight in the United States. 
+                    </div>
+                </li>
+          
+                <li>
+                    <div>
+                      <time>1948</time> Orville Wright passes away in Dayton, Ohio. 
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>1978</time> Wilbur Wright passes away in Dayton, Ohio.
+                    </div>
+                </li>
+
+              </ul>
+            </div>
+            <br><br><br>
+            </font>
+        </section>
+        <section id="Content">
+          <font color="Black" size="3">
+      <table align="center" class="center">
+      <tr>  
+        <th><div id="rcorners1"><h1>Wright Brothers</h1> <br> The Wright Brothers, Orville and Wilbur, are renowned pioneers in the field of aviation who forever altered the course of human history with their groundbreaking invention—the airplane. Their relentless determination, ingenious engineering, and indomitable spirit ushered in a new era of transportation and exploration that continues to shape the world today<img src="The wright brothersIMG1.jpg" height="60px" width="60px" align="right" id="galizur"></div></th>
+          <th><div id="rcorners2"><h1>The Wright Brothers' Journey</h1> <br>Orville and Wilbur Wright were born in the late 19th century in Dayton, Ohio. From an early age, they exhibited an innate curiosity and fascination with flight, inspired by the soaring birds that captured their imaginations. Their journey to conquer the skies was marked by years of meticulous research, experimentation, and innovation.
+
+            In 1903, the Wright Brothers achieved a monumental milestone by successfully launching and piloting the world's first powered, controlled, and sustained flight. On December 17, 1903, at Kitty Hawk, North Carolina, Orville piloted their aircraft, the Wright Flyer, for a distance of 120 feet in just 12 seconds. This achievement marked the birth of modern aviation.
+            
+            <img src="Wright Brothers IMG2.jpg" height="60px" width="80px" align="right" id="galizur"></div></th>
+          <th><div id="rcorners3"><h1>Conclusion</h1> <br>The Wright Brothers' invention of the airplane marked a pivotal moment in human history, fundamentally altering the way people live, work, and connect with one another. Their relentless pursuit of flight exemplifies the spirit of exploration and innovation that continues to drive progress in today's rapidly evolving world. The impact of the airplane on transportation, commerce, science, and culture underscores the enduring legacy of the Wright Brothers and their remarkable contribution to shaping the course of modern civilization<img src="the-wright-brothersIMG3.jpg" height="50px" width="90px" align="right" id="galizur"></div></th></div></th>
+      </tr>
+    </table>
+    </font>
+    </section>
+    
+        </p>
+        
+      </div>
+    </div> 
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="popup">
+      <div id="bar"><center><h1><i><strong><font color="white" size="5">
+        More about Wright Brothers
+        </font></strong></i></h1></center>
+        
+      <img class="open-modal" id="popup-img" src="Wright brother banner.jpg"></div>
+    <div class="modal-content hidden-modal">
+      <div class="modal-header">
+        <h3>About the plane and the impact</h3>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><h1>About the Plane and the impact</h1><br>
+          The Wright Brothers' Airplane:
+          In 1903, the Wright Brothers achieved the first powered flight with their innovative aircraft, the Wright Flyer. This biplane, powered by a 12-horsepower engine, introduced groundbreaking controls and aerodynamics, marking the dawn of modern aviation.<br>
+          
+          Impact of the Airplane:
+          The airplane's influence reverberated across the globe, sparking transformative changes:<br>
+          
+          Global Connectivity: Air travel revolutionized transportation, enabling swift journeys between distant destinations and reshaping tourism, business, and cultural exchange.<br>
+          
+          Economic Impetus: The airplane accelerated commerce, fueling rapid trade and allowing efficient movement of goods across borders, impacting supply chains and economies.<br>
+          
+          Military Strategy: Aerial warfare capabilities transformed military tactics, from reconnaissance to troop deployment, influencing the outcomes of conflicts.<br>
+          
+          Scientific Exploration: Aviation facilitated the study of Earth's atmosphere, climate, and geographical features, advancing research and opening doors to space exploration.<br>
+          
+          Cultural Fusion: The airplane bridged cultures, fostering international dialogue, diplomacy, and fostering a global community.<br>
+          
+          
+          
+          
+          
+          
+          
+    
+    
+        </p>
+      </div>
+    </div> 
+    
+    <div class="blur-bg hidden-blur"></div>
+        </div>
+      </div>
+    </main>
+        <script>
+          let modalContent = document.querySelector(".modal-content");
+    let openModal = document.querySelector(".open-modal");
+    let closeModal = document.querySelector(".close-modal");
+    let blurBg = document.querySelector(".blur-bg");
+    
+    
+    openModal.addEventListener("click", function () {
+              modalContent.classList.remove("hidden-modal");
+              blurBg.classList.remove("hidden-blur");
+    });
+    
+    
+    let closeModalFunction = function () {
+              modalContent.classList.add("hidden-modal")
+              blurBg.classList.add("hidden-blur")
+    }
+    
+    blurBg.addEventListener("click", closeModalFunction);
+    closeModal.addEventListener("click", closeModalFunction);
+    
+    document.addEventListener("keydown", function (event) {
+    
+              if (event.key === "Escape" && !modalContent.classList.contains("hidden")) {
+                        closeModalFunction();
+              }
+    
+              
+    });
+    
+          (function () {
+        const items = document.querySelectorAll(".timeline-section li");
+      
+        function isElementInViewport(el) {
+          let rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      
+        function slideIn() {
+          for (let i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+              items[i].classList.add("slide-in");
+            } else {
+              items[i].classList.remove("slide-in");
+            }
+          }
+        }
+      
+        window.addEventListener("load", slideIn);
+        window.addEventListener("scroll", slideIn);
+        window.addEventListener("resize", slideIn);
+      })();
+        </script>
+  
+</body>
+</html>
